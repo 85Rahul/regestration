@@ -29,13 +29,14 @@ class Login_Activity : AppCompatActivity() {
         }
 
         binding.btnLogin.setOnClickListener {
-            var mobile= binding.editMobnoLogin.text.toString()
+            //var mobile= binding.editMobnoLogin.text.toString()
 
-            if(view.getdata()!=mobile){
-                Toast.makeText(this, "Please enter correct mobile number", Toast.LENGTH_SHORT).show()
+            if(binding.editMobnoLogin.text.toString().equals(view.getdata())) {
+                startActivity(Intent(this, MainActivity::class.java))
             }
             else{
-                startActivity(Intent(this,MainActivity::class.java))
+                Toast.makeText(this, "Please enter correct mobile number", Toast.LENGTH_SHORT).show()
+
             }
         }
 

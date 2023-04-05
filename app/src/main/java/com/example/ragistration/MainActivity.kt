@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.CompoundButton
 import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import com.example.ragistration.databinding.ActivityMainBinding
 
 
@@ -17,8 +18,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener, RadioGroup.OnChe
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        //binding = ActivityMainBinding.inflate(layoutInflater)
+       binding=DataBindingUtil.setContentView(this,R.layout.activity_main)
         binding.submit.setOnClickListener(this)
 
         binding.rdGroup.setOnCheckedChangeListener(this)

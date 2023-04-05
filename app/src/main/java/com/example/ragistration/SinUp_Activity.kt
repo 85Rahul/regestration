@@ -3,6 +3,7 @@ package com.example.ragistration
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.ragistration.Factory.SinUpFactory
@@ -22,8 +23,16 @@ class SinUp_Activity : AppCompatActivity() {
         viewmodel=ViewModelProvider(this,factory)[SinUpViewModel::class.java]
 
 
-        binding.btnSinup.setOnClickListener {
-            viewmodel.savedata(binding.editMobno.text.toString().toInt())
+        binding.btnRagister.setOnClickListener {
+            if(binding.editFname.text.toString().isEmpty()&&binding.editLname.text.toString().isEmpty()&&binding.editMobno.text.toString().isEmpty())
+            {
+                Toast.makeText(this, "please fill value", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                Toast.makeText(this, "ragistration succesfully", Toast.LENGTH_SHORT).show()
+                viewmodel.savedata(binding.editFname.text.toString(),binding.editLname.text.toString(),binding.editMobno.text.toString())
+                startActivity(Intent(this,MainActivity::class.java))
+            }
         }
 
         binding.btnLoginHere.setOnClickListener {

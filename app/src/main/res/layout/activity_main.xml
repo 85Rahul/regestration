@@ -1,144 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-   <EditText
-       android:id="@+id/text_fname"
-       android:layout_width="fill_parent"
-       android:layout_height="wrap_content"
-       android:hint="enter name"
-       android:textStyle="bold"
-       android:layout_marginTop="10dp"/>
+    <data>
 
-    <EditText
-        android:id="@+id/text_lname"
+    </data>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="last name"
-        android:textStyle="bold"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/text_fname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="enter name"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:id="@+id/text_lname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="last name"
+            android:textStyle="bold" />
 
 
+        <EditText
+            android:id="@+id/text_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="mobile number"
+            android:inputType="phone"
+            android:textStyle="bold" />
 
 
-    <EditText
-        android:id="@+id/text_phone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="mobile number"
-        android:inputType="phone"
-        android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/text_alternative"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="alternate number"
+            android:inputType="phone"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/text_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:textStyle="bold" />
 
 
-
-    <EditText
-        android:id="@+id/text_alternative"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="alternate number"
-        android:inputType="phone"
-        android:textStyle="bold"/>
-
-    <EditText
-        android:id="@+id/text_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email"
-        android:textStyle="bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Gender"
+            android:textStyle="bold"
+            android:textSize="25dp" />
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Gender"
-        android:textStyle="bold"
-        android:textSize="25dp"/>
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rdGroup">
 
 
- <RadioGroup
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:id="@+id/rdGroup">
+            <RadioButton
+                android:id="@+id/rb_malename"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="male"
+                android:checked="false"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/rb_femalename"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="female"
+                android:checked="false"
+                android:textStyle="bold" />
+
+        </RadioGroup>
 
 
- <RadioButton
-     android:id="@+id/rb_malename"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-
-        android:hint="male"
-        android:checked="false"
-        android:textStyle="bold"/>
-
-    <RadioButton
-        android:id="@+id/rb_femalename"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:hint="female"
-        android:checked="false"
-        android:textStyle="bold"/>
-
- </RadioGroup>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Hobbies"
+            android:textStyle="bold"
+            android:textSize="25dp" />
 
 
- <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Hobbies"
-        android:textStyle="bold"
-        android:textSize="25dp"/>
+        <CheckBox
+            android:id="@+id/cbCoding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="coding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/cbReadingNobel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Reading book"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-    <CheckBox
-        android:id="@+id/cbCoding"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:text="coding"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <CheckBox
+            android:id="@+id/cbGaming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Gaming"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <CheckBox
-        android:id="@+id/cbReadingNobel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:text="Reading book"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <CheckBox
+            android:id="@+id/cbTavling"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Traveling"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-
-    <CheckBox
-        android:id="@+id/cbGaming"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:text="Gaming"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <CheckBox
-        android:id="@+id/cbTavling"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:text="Traveling"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/submit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Submit"
-        android:textStyle="bold"/>
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textStyle="bold" />
 
 
-
-
-</LinearLayout>
+    </LinearLayout>
+</layout>

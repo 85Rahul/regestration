@@ -44,10 +44,10 @@
 
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_sinup"
+            android:id="@+id/btn_ragister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="SinUP"
+            android:text="Regestred"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/edit_mobno"
             app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +62,7 @@
             android:text="Already have an account"
             android:textSize="20dp"
             android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@id/btn_sinup"
+            app:layout_constraintTop_toBottomOf="@id/btn_ragister"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="40dp" />
@@ -71,7 +71,7 @@
             android:id="@+id/btn_login_here"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="login here"
+            android:text="Sinin"
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/tv_text"
             app:layout_constraintStart_toStartOf="parent"
