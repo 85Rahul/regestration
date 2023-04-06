@@ -23,7 +23,7 @@ class Login_Activity : AppCompatActivity() {
         view= ViewModelProvider(this,factory)[SinUpViewModel::class.java]
 
 
-        binding.btnSinupLogin.setOnClickListener {
+       binding.sinup.setOnClickListener {
             val intent = Intent(this, SinUp_Activity::class.java)
             startActivity(intent)
         }
@@ -31,11 +31,19 @@ class Login_Activity : AppCompatActivity() {
         binding.btnLogin.setOnClickListener {
             //var mobile= binding.editMobnoLogin.text.toString()
 
-            if(binding.editMobnoLogin.text.toString().equals(view.getdata())) {
-                startActivity(Intent(this, MainActivity::class.java))
+//            if(binding.editMobnoLogin.text.toString().isEmpty()){
+//                Toast.makeText(this, "please enter mobile number", Toast.LENGTH_SHORT).show()
+           if ( binding.editMobnoLogin.text.toString().equals(view.getdata())){
+            startActivity(Intent(this, MainActivity::class.java))
+
             }
+             else if(binding.editMobnoLogin.text.toString().isEmpty()){
+               Toast.makeText(this, "please enter mobile number", Toast.LENGTH_SHORT).show()
+
+           }
+
             else{
-                Toast.makeText(this, "Please enter correct mobile number", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Please enter correct mobile number", Toast.LENGTH_SHORT).show()
 
             }
         }

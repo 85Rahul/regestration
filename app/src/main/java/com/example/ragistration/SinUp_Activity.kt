@@ -31,7 +31,7 @@ class SinUp_Activity : AppCompatActivity() {
             else{
                 Toast.makeText(this, "ragistration succesfully", Toast.LENGTH_SHORT).show()
                 viewmodel.savedata(binding.editFname.text.toString(),binding.editLname.text.toString(),binding.editMobno.text.toString())
-                startActivity(Intent(this,MainActivity::class.java))
+                startActivity(Intent(this,Login_Activity::class.java))
             }
         }
 
