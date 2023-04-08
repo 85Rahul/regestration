@@ -35,7 +35,7 @@ class SinUp_Activity : AppCompatActivity() {
             }
         }
 
-        binding.btnLoginHere.setOnClickListener {
+        binding.SinIn.setOnClickListener {
             val intent = Intent(this,Login_Activity::class.java)
             startActivity(intent)
         }

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
@@ -7,61 +8,155 @@
 
     </data>
 
-    <LinearLayout
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".MainActivity"
         android:background="@drawable/img_2">
 
-        <EditText
-            android:id="@+id/text_fname"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:hint="enter name"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp" />
 
         <EditText
-            android:id="@+id/text_lname"
-            android:layout_width="match_parent"
+            android:id="@+id/text_Fname"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="last name"
-            android:textStyle="bold" />
-
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/input_bg"
+            android:ems="10"
+            android:hint="mobile no"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="157dp" />
 
         <EditText
-            android:id="@+id/text_phone"
-            android:layout_width="match_parent"
+            android:id="@+id/text_Lname"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="mobile number"
-            android:inputType="phone"
-            android:textStyle="bold" />
-
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/input_bg"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:text="alternate mobile no"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="215dp" />
 
         <EditText
-            android:id="@+id/text_alternative"
-            android:layout_width="match_parent"
+            android:id="@+id/textPhone"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="alternate number"
-            android:inputType="phone"
-            android:textStyle="bold" />
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/input_bg"
+            android:ems="10"
+            android:hint="enter first name"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/text_email"
-            android:layout_width="match_parent"
+            android:id="@+id/textAlternative"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="Email"
-            android:textStyle="bold" />
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/input_bg"
+            android:ems="10"
+            android:hint="enter last name"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="97dp" />
 
+        <EditText
+            android:id="@+id/textEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/input_bg"
+            android:ems="10"
+            android:hint="email"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="280dp" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/input_bg"
+            android:ems="10"
+            android:hint="DOB"
+            android:inputType="textPersonName"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="336dp" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Gender"
-            android:textStyle="bold"
-            android:textSize="25dp" />
-
+            android:text="Gender"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.079"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="399dp" />
 
         <RadioGroup
             android:layout_width="wrap_content"
@@ -69,40 +164,57 @@
             android:id="@+id/rdGroup">
 
 
-            <RadioButton
-                android:id="@+id/rb_malename"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-
-                android:hint="male"
-                android:checked="false"
-                android:textStyle="bold" />
-
-            <RadioButton
-                android:id="@+id/rb_femalename"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:hint="female"
-                android:checked="false"
-                android:textStyle="bold" />
-
         </RadioGroup>
+
+        <RadioButton
+            android:id="@+id/rb_malename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:hint="male"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="149dp"
+            tools:layout_editor_absoluteY="399dp" />
+
+        <RadioButton
+            android:id="@+id/rb_femalename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:hint="female"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="240dp"
+            tools:layout_editor_absoluteY="399dp" />
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/input_bg"
             android:hint="Hobbies"
+            android:text="Select Course"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="25dp"
             android:textStyle="bold"
-            android:textSize="25dp" />
-
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rb_malename" />
 
         <CheckBox
             android:id="@+id/cbCoding"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="coding"
+            android:layout_marginStart="284dp"
+            android:layout_marginTop="516dp"
+            android:text="C"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -110,18 +222,19 @@
             android:id="@+id/cbReadingNobel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="Reading book"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="584dp"
+            android:text="kotlin"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
 
         <CheckBox
             android:id="@+id/cbGaming"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="Gaming"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="516dp"
+            android:text="C++"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -129,18 +242,75 @@
             android:id="@+id/cbTavling"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="Traveling"
+            android:layout_marginStart="148dp"
+            android:layout_marginTop="516dp"
+            android:text="java"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=".net"
+            tools:layout_editor_absoluteX="170dp"
+            tools:layout_editor_absoluteY="584dp" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="java script"
+            tools:layout_editor_absoluteX="284dp"
+            tools:layout_editor_absoluteY="586dp" />
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HTML"
+            tools:layout_editor_absoluteX="54dp"
+            tools:layout_editor_absoluteY="647dp" />
+
+        <CheckBox
+            android:id="@+id/checkBox4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CSS"
+            tools:layout_editor_absoluteX="170dp"
+            tools:layout_editor_absoluteY="647dp" />
+
+        <CheckBox
+            android:id="@+id/checkBox5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visual basic"
+            tools:layout_editor_absoluteX="284dp"
+            tools:layout_editor_absoluteY="647dp" />
+
+        <CheckBox
+            android:id="@+id/checkBox6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Android"
+            tools:layout_editor_absoluteX="54dp"
+            tools:layout_editor_absoluteY="695dp" />
+
         <Button
             android:id="@+id/submit"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Submit"
-            android:textStyle="bold" />
+            android:background="@drawable/btn_bg"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="701dp" />
 
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
 </layout>
