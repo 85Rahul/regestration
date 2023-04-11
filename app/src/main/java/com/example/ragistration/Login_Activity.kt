@@ -27,6 +27,10 @@ class Login_Activity : AppCompatActivity() {
             val intent = Intent(this, SinUp_Activity::class.java)
             startActivity(intent)
         }
+        binding.btnSkip.setOnClickListener {
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+        }
 
         binding.btnLogin.setOnClickListener {
             //var mobile= binding.editMobnoLogin.text.toString()
