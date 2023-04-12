@@ -18,6 +18,7 @@ private const val DOB="dob"
 private const val GENDER="gender"
 private const val COURSE="course"
 private const val SRNO = "Sr"
+private const val QUERY="query"
 
 class SqliteDbReposotory(private val context: Context) {
 
@@ -28,15 +29,16 @@ class SqliteDbReposotory(private val context: Context) {
     val sqliteDb = dbHelper.writableDatabase
 
 
-    fun createData(fName: String, lName: String, phone: String,email:String,dob:String,gender:String,course:String) {
+    fun createData(fName: String, LName: String, phone: String,email:String,dob:String,gender:String,course:String) {
         val contentValue = ContentValues()
         contentValue.put(FNAME, fName)
-        contentValue.put(LNAME, lName)
+        contentValue.put(LNAME, LName)
         contentValue.put(PHONE, phone)
         contentValue.put(EMAIL, email)
         contentValue.put(DOB, dob)
         contentValue.put(GENDER, gender)
         contentValue.put(COURSE, course)
+        contentValue.put(QUERY,query)
         val id: Long = sqliteDb.insert(TABLE_NAME, null, contentValue)
         if (id > 0) {
             Toast.makeText(context, "Data Saved Successfully.", Toast.LENGTH_SHORT).show()
@@ -44,6 +46,8 @@ class SqliteDbReposotory(private val context: Context) {
             Toast.makeText(context, "Something went wrong.", Toast.LENGTH_SHORT).show()
         }
     }
+
+    fun getdata()
 
 
     inner class MyDbHelper(private val context:Context):SQLiteOpenHelper(context, DB_NAME,null,

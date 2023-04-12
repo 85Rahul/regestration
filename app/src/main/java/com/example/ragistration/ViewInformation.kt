@@ -5,7 +5,8 @@ import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import com.example.ragistration.databinding.ActivityDetailsBinding
 
-class DetailsActivity : AppCompatActivity() {
+
+class ViewInformation : AppCompatActivity() {
     private lateinit var binding:ActivityDetailsBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
