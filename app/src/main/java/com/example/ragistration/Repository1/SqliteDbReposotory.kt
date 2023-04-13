@@ -8,7 +8,7 @@ import android.widget.Toast
 
 
 private const val DB_NAME = "_db_chetu"
-private const val DB_VERSION = 1
+private const val DB_VERSION = 8
 private const val TABLE_NAME = "student"
 private const val FNAME = "FirstName"
 private const val LNAME = "LastName"
@@ -18,18 +18,27 @@ private const val DOB="dob"
 private const val GENDER="gender"
 private const val COURSE="course"
 private const val SRNO = "Sr"
-private const val QUERY="query1"
+
 
 class SqliteDbReposotory(private val context: Context) {
 
     val query =
-        "CREATE TABLE $TABLE_NAME($SRNO INTEGER PRIMARY KEY AUTOINCREMENT, $FNAME TEXT, $LNAME TEXT, $PHONE TEXT,$EMAIL TEXT, $DOB TEXT,$GENDER TEXT,$COURSE TEXT,$QUERY TEXT)"
+        "CREATE TABLE $TABLE_NAME($SRNO INTEGER PRIMARY KEY AUTOINCREMENT, $FNAME TEXT, $LNAME TEXT, $PHONE TEXT,$EMAIL TEXT, $DOB TEXT,$GENDER TEXT,$COURSE TEXT)"
 
     val dbHelper = MyDbHelper(context)
     val sqliteDb = dbHelper.writableDatabase
 
 
-    fun createData(fName: String, LName: String, phone: String,email:String,dob:String,gender:String,course:String,query1:String) {
+    fun createData(
+        fName: String,
+        LName: String,
+        phone: String,
+        email: String,
+        dob: String,
+        gender: String,
+        course: String,
+        course1: String
+    ) {
         val contentValue = ContentValues()
         contentValue.put(FNAME, fName)
         contentValue.put(LNAME, LName)
@@ -38,7 +47,7 @@ class SqliteDbReposotory(private val context: Context) {
         contentValue.put(DOB, dob)
         contentValue.put(GENDER, gender)
         contentValue.put(COURSE, course)
-        contentValue.put(QUERY,query1)
+//        contentValue.put(QUERY,query1)
         val id: Long = sqliteDb.insert(TABLE_NAME, null, contentValue)
         if (id > 0) {
             Toast.makeText(context, "Data Saved Successfully.", Toast.LENGTH_SHORT).show()
@@ -55,11 +64,11 @@ class SqliteDbReposotory(private val context: Context) {
 
     inner class MyDbHelper(private val context:Context):SQLiteOpenHelper(context, DB_NAME,null,
        DB_VERSION){
-       override fun onCreate(sqlitedb: SQLiteDatabase?) {
-           sqliteDb.execSQL(query)
+       override fun onCreate(sqliteDb: SQLiteDatabase?) {
+           sqliteDb?.execSQL(query)
        }
 
-       override fun onUpgrade(sqlitedb: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+       override fun onUpgrade(sqliteDb: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
            TODO("Not yet implemented")
        }
 

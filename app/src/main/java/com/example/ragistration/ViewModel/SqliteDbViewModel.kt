@@ -6,7 +6,7 @@ import com.example.ragistration.Repository1.SqliteDbReposotory
 class SqliteDbViewModel(private val repository:SqliteDbReposotory):ViewModel(){
 
 fun createData(fName: String, lName: String, phone: String,email:String,dob:String,gender:String,course:String) {
-    repository.createData(fName,lName,phone,email,dob,course,gender,)
+    repository.createData(fName,lName,phone,email,dob,course,gender,course)
 }
 
 }
