@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Ragistration"
         tools:targetApi="31">
         <activity
+            android:name=".ArayyAdapter"
+            android:exported="false" />
+        <activity
             android:name=".DetailsActivity"
             android:exported="false" />
         <activity

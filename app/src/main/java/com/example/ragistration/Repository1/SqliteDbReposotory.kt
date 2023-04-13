@@ -18,18 +18,18 @@ private const val DOB="dob"
 private const val GENDER="gender"
 private const val COURSE="course"
 private const val SRNO = "Sr"
-private const val QUERY="query"
+private const val QUERY="query1"
 
 class SqliteDbReposotory(private val context: Context) {
 
     val query =
-        "CREATE TABLE $TABLE_NAME($SRNO INTEGER PRIMARY KEY AUTOINCREMENT, $FNAME TEXT, $LNAME TEXT, $PHONE TEXT,$EMAIL TEXT, $DOB TEXT,$GENDER TEXT,$COURSE TEXT)"
+        "CREATE TABLE $TABLE_NAME($SRNO INTEGER PRIMARY KEY AUTOINCREMENT, $FNAME TEXT, $LNAME TEXT, $PHONE TEXT,$EMAIL TEXT, $DOB TEXT,$GENDER TEXT,$COURSE TEXT,$QUERY TEXT)"
 
     val dbHelper = MyDbHelper(context)
     val sqliteDb = dbHelper.writableDatabase
 
 
-    fun createData(fName: String, LName: String, phone: String,email:String,dob:String,gender:String,course:String) {
+    fun createData(fName: String, LName: String, phone: String,email:String,dob:String,gender:String,course:String,query1:String) {
         val contentValue = ContentValues()
         contentValue.put(FNAME, fName)
         contentValue.put(LNAME, LName)
@@ -38,7 +38,7 @@ class SqliteDbReposotory(private val context: Context) {
         contentValue.put(DOB, dob)
         contentValue.put(GENDER, gender)
         contentValue.put(COURSE, course)
-        contentValue.put(QUERY,query)
+        contentValue.put(QUERY,query1)
         val id: Long = sqliteDb.insert(TABLE_NAME, null, contentValue)
         if (id > 0) {
             Toast.makeText(context, "Data Saved Successfully.", Toast.LENGTH_SHORT).show()
@@ -47,7 +47,10 @@ class SqliteDbReposotory(private val context: Context) {
         }
     }
 
-    fun getdata()
+
+
+
+
 
 
     inner class MyDbHelper(private val context:Context):SQLiteOpenHelper(context, DB_NAME,null,
